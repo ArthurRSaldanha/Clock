@@ -1,8 +1,8 @@
-let hours = document.querySelector('#hours');
-let minutes = document.querySelector('#minutes');
-let seconds = document.querySelector('#seconds');
+const hours = document.querySelector('#hours');
+const minutes = document.querySelector('#minutes');
+const seconds = document.querySelector('#seconds');
 
-let clock = setInterval(function time() {
+const clock = setInterval(function time() {
     let dateToday = new Date();
     let hour = dateToday.getHours();
     let minute = dateToday.getMinutes();
@@ -13,11 +13,11 @@ let clock = setInterval(function time() {
     }
 
     if (minute < 10){
-        hour = `0 ${minute}`;
+        minute = `0 ${minute}`;
     }
 
     if (second < 10){
-        hour = `0 ${second}`;
+        second = `0 ${second}`;
     }
 
     hours.textContent = hour;
